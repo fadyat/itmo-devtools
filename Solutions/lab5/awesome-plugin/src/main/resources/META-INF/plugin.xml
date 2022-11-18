@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>fadyat.github.com.awesome-plugin</id>
+    <name>Awesome</name>
+    <vendor email="github.com/fadyat" url="https://github.com/fadyat">fadyat.github.com</vendor>
+    <depends>com.intellij.modules.platform</depends>
+
+    <description><![CDATA[
+        <p>Awesome plugin for IntelliJ IDEA.</p>
+        <p>It is a plugin that does nothing.</p>
+    ]]></description>
+
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+
+    <actions>
+        <group id="AwesomeGroup" text="GigaRequest"
+               description="GigaRequest is a plugin that does simple http requests">
+            <add-to-group group-id="MainMenu"
+                          anchor="last"/>
+            <action class="fadyat.github.com.awesomeplugin.actions.GigaRequestAction"
+                    id="GigaRequest"
+                    text="Make GigaRequest"
+                    description="Minimalistic postman clone"/>
+        </group>
+    </actions>
+</idea-plugin>
