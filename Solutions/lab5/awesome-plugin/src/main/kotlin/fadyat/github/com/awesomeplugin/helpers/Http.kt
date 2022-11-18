@@ -13,11 +13,17 @@ enum class HttpMethod {
 fun doRequest(
     method: HttpMethod,
     url: String,
+    headers: Map<String, String> = mapOf(),
+    body: String = "",
 ): HttpResponse<String> {
     val client = HttpClient.newHttpClient()
     val requestBuilder = HttpRequest.newBuilder()
         .uri(URI.create(url))
-        .method(method.name, HttpRequest.BodyPublishers.noBody())
+        .method(method.name, HttpRequest.BodyPublishers.ofString(body))
+
+    headers.forEach { (key, value) ->
+        requestBuilder.header(key, value)
+    }
 
     val request = requestBuilder.build()
     return client.send(request, HttpResponse.BodyHandlers.ofString())

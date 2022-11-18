@@ -18,7 +18,12 @@ class GigaRequestAction : AnAction() {
         if (requestWrapper.showAndGet()) {
             lateinit var response: HttpResponse<String>
             try {
-                response = doRequest(requestWrapper.getMethod(), requestWrapper.getUrl())
+                response = doRequest(
+                    requestWrapper.getMethod(),
+                    requestWrapper.getUrl(),
+                    requestWrapper.getHeaders(),
+                    requestWrapper.getBody(),
+                )
             } catch (ex: IOException) {
                 displayErrorMessage(e.project, ex.message)
                 return

@@ -20,7 +20,7 @@
                           anchor="last"/>
             <action class="fadyat.github.com.awesomeplugin.actions.GigaRequestAction"
                     id="GigaRequest"
-                    text="Make GigaRequest"
+                    text="Make Request"
                     description="Minimalistic postman clone"/>
         </group>
     </actions>
