@@ -10,7 +10,10 @@
     ]]></description>
 
     <extensions defaultExtensionNs="com.intellij">
-
+        <toolWindow factoryClass="fadyat.github.com.awesomeplugin.windows.RequestWindowFactory"
+                    id="GigaRequest"
+                    anchor="right"
+        />
     </extensions>
 
     <actions>
