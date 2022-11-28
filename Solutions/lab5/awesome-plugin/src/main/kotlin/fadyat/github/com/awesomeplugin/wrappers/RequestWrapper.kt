@@ -38,7 +38,6 @@ class RequestWrapper : DialogWrapper(true) {
         scrollableResponsePane.preferredSize = scrollableResponsePane.preferredSize.apply { height = 100 }
         responseBody.isEditable = false
         statusCode.isEditable = false
-        cancelAction.isEnabled = false
     }
 
     override fun createCenterPanel(): JComponent {
